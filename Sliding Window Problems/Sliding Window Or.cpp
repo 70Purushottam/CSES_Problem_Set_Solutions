@@ -5,7 +5,7 @@
 using namespace std;
  
 int main() {
-	// your code goes here
+	
 int n,k;
 cin>>n>>k;
     ll x, a, b, c;
