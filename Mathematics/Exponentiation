@@ -1,0 +1,29 @@
+// C++ Solution
+
+#include <bits/stdc++.h>
+using namespace std;
+# define ll long long
+ll mod = 1e9+7;
+ll expt(ll a, ll b){
+    if(b==0) return 1;
+   
+     ll half=expt(a,b/2);
+     half%=mod;
+      ll ans=half*half;
+     ans %=mod;
+     
+     if(b%2==0) return ans%mod;
+    
+    return a*ans;
+}
+ 
+int main() {
+	// your code goes here
+ll n;
+cin>>n;
+while(n--){
+ll a,b;
+cin>>a>>b;
+cout<<expt(a,b)%mod<<"\n";
+}
+}
